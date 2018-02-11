@@ -42,10 +42,10 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    file = filename_parsed(filename)
+    new_filename = filename_parsed(filename)
 
     song = self.new
-    song.name = filename.last
+    song.name = file.last
     song.artist_name = filename.first
   end
 
