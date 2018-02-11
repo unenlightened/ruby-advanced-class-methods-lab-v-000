@@ -47,7 +47,7 @@ class Song
 
   def filename_parsed(filename)
     filename.split!(" - ")
-    filename.last.slice!(".mp3")
+    filename.last.chomp(".mp3")
     filename
   end
 end
