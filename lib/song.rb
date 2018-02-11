@@ -45,8 +45,8 @@ class Song
     filename_parsed(filename)
 
     song = self.new
-    song.name = file.last
-    song.artist_name = filename.first
+    song.name = @parse_name
+    song.artist_name = @parse_title
   end
 
   def filename_parsed(filename)
