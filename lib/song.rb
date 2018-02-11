@@ -48,6 +48,7 @@ class Song
     song = self.new
     song.name = filename_parsed.last
     song.artist_name = filename_parsed.first
+    song
   end
 
   def filename_parsed(filename)
