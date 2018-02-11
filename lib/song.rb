@@ -43,11 +43,11 @@ class Song
 
   def self.new_from_filename(filename)
     # filename_parsed(filename)
-    filename.chomp!(".mp3").split!(" - ")
+    file_parsed = filename.chomp!(".mp3").split(" - ")
 
     song = self.new
-    song.name = filename.last
-    song.artist_name = filename.first
+    song.name = file_parsed.last
+    song.artist_name = file_parsed.first
   end
 
   def filename_parsed(filename)
