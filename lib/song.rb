@@ -42,10 +42,12 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    
+
   end
 
   def filename_parsed(filename)
     filename.split!(" - ")
+    filename.last.slice!(".mp3")
+    filename
   end
 end
