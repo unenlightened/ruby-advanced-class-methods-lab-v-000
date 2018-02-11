@@ -51,7 +51,7 @@ class Song
     song
   end
 
-  def filename_parse(filename)
-    filename.chomp!(".mp3").split(" - ")
+  def self.filename_parse
+    self.chomp!(".mp3").split(" - ")
   end
 end
