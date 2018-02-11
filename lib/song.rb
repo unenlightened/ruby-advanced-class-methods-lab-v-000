@@ -45,14 +45,13 @@ class Song
     filename_parsed(filename)
 
     song = self.new
-    song.name = @parse_name
-    song.artist_name = @parse_title
+    song.name = file.last
+    song.artist_name = filename.first
   end
 
   def filename_parsed(filename)
     filename.split!(" - ")
     filename.last.chomp!(".mp3")   # or .slice!
-    @parse_name = filename.last
-    @parse_title = filename.first
+    filename
   end
 end
